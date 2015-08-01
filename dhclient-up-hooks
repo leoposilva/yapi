@@ -1,0 +1,13 @@
+#!/bin/sh
+## Prevent DHCP server on eth0 from forcing a default route on us
+
+echo "Aqui" >> /home/pi/debug.log
+case ${interface} in
+  eth0)
+     printf "executing ip route delete default via $new_routers\n" 
+     ip route delete default via $new_routers
+  ;;
+     *)
+  ;;
+esac
+

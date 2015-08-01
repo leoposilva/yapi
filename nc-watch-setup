@@ -1,0 +1,9 @@
+
+
+    On the server:
+    mkfifopipe_name
+    nc -l -pport_number<pipe_name  | program_name>pipe_name
+
+    On the client:
+    nc server_machine_name port_number
+
